@@ -1,0 +1,17 @@
+name := """mySHSM"""
+
+version := "1.0-SNAPSHOT"
+
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
+
+scalaVersion := "2.11.7"
+
+libraryDependencies ++= Seq(
+  javaJdbc,
+  cache,
+  javaWs
+)
+libraryDependencies += "com.jcraft" % "jsch" % "0.1.53"
+libraryDependencies += "com.google.code.gson" % "gson" % "2.3"
+libraryDependencies += "org.mongodb.morphia" % "morphia" % "1.0.1"
+libraryDependencies += "org.mongodb" % "mongodb-driver" % "3.2.0"
